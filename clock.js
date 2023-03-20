@@ -9,7 +9,7 @@ function get_time(timeRegion) {
             const time = r.data['unixtime']
             resolve(time)
         }
-        )
+        ).catch(err=>reject(err))
     })
 }
 

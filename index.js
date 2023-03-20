@@ -23,14 +23,15 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'static')));
 
 app.get('/time', async (req, res) => {
-    const time = await get_time(config.timeRegion);
-    res.send({ time })
+    get_time(config.timeRegion)
+        .then(t => res.send(t))
+        .catch(err => console.log(err));
 })
 
 app.get('/weather', async (req, res) => {
-    get_weather(config.weatherRegion).then(r=>{
+    get_weather(config.weatherRegion).then(r => {
         res.send(r)
-    })
+    }).catch(err => console.log(err))
 })
 
 app.listen(port, () => {

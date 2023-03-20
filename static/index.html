@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Neon Blue Rectangle</title>
-    <style>
-      body {
-        background-color: black;
-      }
-      
-      #rectangle {
-        width: 600px;
-        height: 400px;
-        background-color: #00FFFF; /* neon blue color */
-        margin: auto;
-        position: absolute;
-        top: 0; bottom: 0; left: 0; right: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="rectangle"></div>
-  </body>
+
+<head>
+  <title>Neon Blue Rectangle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <img class="demoimg" src="clock.png">
+  <div id="clockbody">
+    <div id="time" class="d">Time</div>
+    <div id="icon" class="d">Icon</div>
+    <div id="day" class="d">Day</div>
+    <div id="temp" class="d">Temp</div>
+    <div id="mo_date" class="d">Jan 1</div>
+    <script src="api.js" class="d"></script>
+    <script src="script.js" class="d"></script>
+
+  </div>
+</body>
+
 </html>
